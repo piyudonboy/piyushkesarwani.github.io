@@ -1,0 +1,307 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="My personal portfolio website">
+  <title>My Portfolio | Developer</title>
+
+  <style>
+    :root {
+      --bg: #0b1120;
+      --card: #151e30;
+      --text: #f1f5f9;
+      --muted: #a6b3c7;
+      --accent: #60a5fa;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1000px, 90%);
+      margin: auto;
+    }
+
+    header {
+      padding: 20px 0;
+      border-bottom: 1px solid #263247;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 1.4rem;
+      font-weight: bold;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 18px;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: var(--text);
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    .hero {
+      padding: 100px 0 75px;
+    }
+
+    .tag {
+      color: var(--accent);
+      font-weight: bold;
+    }
+
+    h1 {
+      font-size: clamp(2.4rem, 6vw, 4rem);
+      line-height: 1.2;
+      margin: 15px 0;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .hero p, .section-text {
+      color: var(--muted);
+      max-width: 650px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: #08111f;
+      padding: 11px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      margin-top: 22px;
+    }
+
+    section {
+      padding: 55px 0;
+      scroll-margin-top: 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns:
+        repeat(auto-fit, minmax(230px, 1fr));
+      gap: 20px;
+      margin-top: 25px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid #263247;
+      border-radius: 12px;
+      padding: 24px;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .skills span {
+      background: var(--card);
+      border: 1px solid #334155;
+      padding: 8px 14px;
+      border-radius: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px 0;
+      border-top: 1px solid #263247;
+      color: var(--muted);
+    }
+
+    @media (max-width: 500px) {
+      nav {
+        align-items: flex-start;
+      }
+
+      nav ul {
+        gap: 12px;
+      }
+
+      .hero {
+        padding-top: 65px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="container">
+      <a class="logo" href="#home">MyPortfolio.</a>
+
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero container" id="home">
+      <p class="tag">WELCOME TO MY PORTFOLIO</p>
+      <h1>Hi, I'm Your Name.<br>
+        <span style="color: var(--accent);">
+          Aspiring Developer
+        </span>
+      </h1>
+
+      <p>
+        I am learning programming and building projects
+        to solve real-world problems. Welcome to my
+        personal portfolio.
+      </p>
+
+      <a class="btn" href="#projects">Explore My Projects</a>
+    </section>
+
+    <section id="about" class="container">
+      <h2>About Me</h2>
+      <p class="section-text">
+        I am a student who enjoys learning technology,
+        solving problems, and developing useful projects.
+        My goal is to improve my skills and grow as a
+        developer.
+      </p>
+    </section>
+
+    <section id="skills" class="container">
+      <h2>My Skills</h2>
+      <p class="section-text">
+        These are the technologies I am learning.
+        Update this list to match your real skills.
+      </p>
+
+      <div class="skills">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>Python</span>
+        <span>Excel</span>
+        <span>Git & GitHub</span>
+      </div>
+    </section>
+
+    <section id="projects" class="container">
+      <h2>My Projects</h2>
+      <p class="section-text">
+        Add links to your real projects as you complete them.
+      </p>
+
+      <div class="grid">
+        <article class="card">
+          <h3>Student Management System</h3>
+          <p>
+            A project to manage student details and records
+            using Python.
+          </p>
+          <a href="https://github.com/">View on GitHub →</a>
+        </article>
+
+        <article class="card">
+          <h3>Expense Tracker</h3>
+          <p>
+            A project for recording expenses and tracking
+            spending.
+          </p>
+          <a href="https://github.com/">View on GitHub →</a>
+        </article>
+
+        <article class="card">
+          <h3>Sales Analysis</h3>
+          <p>
+            A data analysis project to explore sales and
+            summarize business performance.
+          </p>
+          <a href="https://github.com/">View on GitHub →</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="container">
+      <h2>Contact Me</h2>
+      <p class="section-text">
+        Interested in my work? You can contact me by email
+        or explore my GitHub projects.
+      </p>
+
+      <a class="btn"
+         href="mailto:your-email@example.com">
+        Send Me an Email
+      </a>
+
+      <p style="margin-top: 20px;">
+        <a href="https://github.com/"
+           target="_blank"
+           rel="noopener noreferrer">
+          My GitHub Profile
+        </a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>
+      © <span id="year"></span> Your Name.
+      Built with HTML, CSS and JavaScript.
+    </p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+</body>
+</html>
